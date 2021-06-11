@@ -1,0 +1,200 @@
+{
+	"code": "200",
+	"msg": "success",
+	"data": {
+		"tableId": 1,
+		"workFlowVersionId": "",
+		"workFlowDef": {
+			"name": "合同审批",
+			"publicFlag": 1,
+			"sortNo": 5,
+			"duplicateRemovelFlag": 1,
+			"optionTip": "",
+			"optionNotNull": 0,
+			"status": 1
+		},
+		"directorMaxLevel": 4,
+		"flowPermission": [],
+		"nodeConfig": {
+			"pkId": "sid-start-node",
+			"nodeName": "开始",
+			"type": 0,
+			"priorityLevel": "",
+			"conditionList": [],
+			"nodeUserList": [],
+			"childNode": {
+				"nodeName": "路由",
+				"type": 4,
+				"childNode": null,
+				"conditionNodes": [
+					{
+						"nodeName": "条件1",
+						"type": 3,
+						"priorityLevel": 1,
+						"conditionList": [],
+						"nodeUserList": [],
+						"childNode": {
+							"nodeName": "结果",
+							"type": 5,
+							"nodeUserList": [],
+							"nodeId": "2645FBF82822CD47C61BC413C703B8C7",
+							"childNode": null,
+							"owner": "命中结果 大于等于 4",
+							"ownerList": [
+								[
+									{
+										"param": {
+											"paramType": "010",
+											"paramGroupId": "0002169119",
+											"paramName": "命中结果",
+											"paramId": "0002170006",
+											"paramGroupName": "借据入催",
+											"quoteList": [
+												{
+													"strategyGroupId": "0002137050",
+													"strategyGroupName": "",
+													"strategyType": "050"
+												},
+												{
+													"strategyGroupId": "0002424217",
+													"strategyGroupName": "zhuxin(个金)-test4",
+													"strategyType": "020"
+												}
+											],
+											"paramDataType": "020",
+											"paramValue": "$.hitResult",
+											"valueName": "命中结果",
+											"valueId": "0002170006"
+										},
+										"operator": "大于等于",
+										"valueType": 1,
+										"relation": "且",
+										"groupRelation": "且",
+										"rowValue": "4"
+									}
+								]
+							]
+						},
+						"nodeId": "A77338DCE665EA423C78293BCF0F2658",
+						"owner": "借据逾期天数 大于等于 2",
+						"ownerList": [
+							[
+								{
+									"param": {
+										"paramType": "010",
+										"paramGroupId": "0002169119",
+										"paramName": "借据逾期天数",
+										"paramId": "0002169120",
+										"paramGroupName": "借据入催",
+										"quoteList": [
+											{
+												"strategyGroupId": "2642720",
+												"strategyGroupName": "导入测试-请不要动此策略组",
+												"strategyType": "020"
+											},
+											{
+												"strategyGroupId": "0002642719",
+												"strategyGroupName": "请不要动此策略组",
+												"strategyType": "020"
+											}
+										],
+										"paramDataType": "010",
+										"paramValue": "$.invoiceInfo.overdueDays",
+										"valueName": "借据逾期天数",
+										"valueId": "0002169120"
+									},
+									"operator": "大于等于",
+									"valueType": 1,
+									"relation": "且",
+									"groupRelation": "且",
+									"rowValue": "2"
+								}
+							]
+						]
+					},
+					{
+						"nodeName": "条件2",
+						"type": 3,
+						"priorityLevel": 2,
+						"conditionList": [],
+						"nodeUserList": [],
+						"childNode": {
+							"nodeName": "结果",
+							"type": 5,
+							"nodeUserList": [],
+							"nodeId": "D5A5C119B5685D4B48688AFF94629BB5",
+							"childNode": null,
+							"owner": "产品编号 大于等于 434",
+							"ownerList": [
+								[
+									{
+										"param": {
+											"paramType": "010",
+											"paramGroupId": "0002169119",
+											"paramName": "产品编号",
+											"paramId": "0002172756",
+											"paramGroupName": "借据入催",
+											"quoteList": [
+												{
+													"strategyGroupId": "0002424217",
+													"strategyGroupName": "zhuxin(个金)-test4",
+													"strategyType": "040"
+												}
+											],
+											"paramDataType": "020",
+											"paramValue": "$.invoiceInfo.productId",
+											"valueName": "产品编号",
+											"valueId": "0002172756"
+										},
+										"operator": "大于等于",
+										"valueType": 1,
+										"relation": "且",
+										"groupRelation": "且",
+										"rowValue": "434"
+									}
+								]
+							]
+						},
+						"nodeId": "402725A4CFC0CE4D74A8A1F51A318773",
+						"owner": "命中结果 大于等于 4",
+						"ownerList": [
+							[
+								{
+									"param": {
+										"paramType": "010",
+										"paramGroupId": "0002169119",
+										"paramName": "命中结果",
+										"paramId": "0002170006",
+										"paramGroupName": "借据入催",
+										"quoteList": [
+											{
+												"strategyGroupId": "0002137050",
+												"strategyGroupName": "",
+												"strategyType": "050"
+											},
+											{
+												"strategyGroupId": "0002424217",
+												"strategyGroupName": "zhuxin(个金)-test4",
+												"strategyType": "020"
+											}
+										],
+										"paramDataType": "020",
+										"paramValue": "$.hitResult",
+										"valueName": "命中结果",
+										"valueId": "0002170006"
+									},
+									"operator": "大于等于",
+									"valueType": 1,
+									"relation": "且",
+									"groupRelation": "且",
+									"rowValue": "4"
+								}
+							]
+						]
+					}
+				],
+				"nodeId": "4406E6C851193646A31B62316FBDD015"
+			}
+		}
+	}
+}

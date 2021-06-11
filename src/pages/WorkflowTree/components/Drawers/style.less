@@ -1,0 +1,99 @@
+.conditionForm {
+  .m-divider {
+    margin: 4px 0 12px;
+    font-size: 13px;
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .ant-form-item-label {
+      line-height: 32px;
+    }
+    .ant-form-explain {
+      position: absolute;
+    }
+    // .ant-select-selection--single {
+    //   overflow: hidden;
+    // }
+  }
+}
+// 按钮组
+.m-btnwrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #e9e9e9;
+  padding: 10px 16px;
+  background: #fff;
+  text-align: right;
+}
+// 关系table
+.relationTableWrap {
+  padding: 10px;
+  .td-notshow {
+    // 直接隐藏列表格样式会出问题
+    // display: none;
+    padding: 0;
+    :global {
+      .ant-table-header-column {
+        display: none;
+      }
+    }
+  }
+  .item-notshow {
+    display: none;
+  }
+  :global {
+    .ant-table-content .ant-table-body {
+      margin: 0;
+    }
+    .ant-form-explain {
+      display: none;
+    }
+  }
+}
+// 关系且或
+.RelationWrap {
+  margin: 8px 0;
+}
+.relationTagAnd {
+  color: #00f9c5;
+  border-radius: 3px;
+  border: 1px solid #00f9c5;
+  padding: 0 6px;
+  margin: 0 8px;
+  background-color: #e3fffa;
+}
+.relationTagOr {
+  color: #9a00f9;
+  border-radius: 3px;
+  border: 1px solid #9a00f9;
+  padding: 0 6px;
+  margin: 0 8px;
+  background-color: #f5e5ff;
+}
+
+// 条件组
+.group-wrapper-multi {
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+.group-wrapper-single {
+  margin-bottom: 16px;
+  .relationTableWrap {
+    padding: 0 0 10px;
+  }
+}
+.group-header {
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eeeeee;
+  padding: 0 10px;
+}
