@@ -2,11 +2,7 @@
  * @Description:
  * @Author: zhouxiaojuan
  * @Date: 2021-04-21 09:55:51
-<<<<<<< HEAD:src/pages/WorkflowTree/components/Drawers/DrawerWraper.js
- * @LastEditTime: 2021-06-11 14:50:34
-=======
- * @LastEditTime: 2021-06-11 09:45:19
->>>>>>> dcc2a9597052947fcb120155581dc4cde2db9c8b:src/pages/Collection/Tactics/WorkflowTree/components/Drawers/DrawerWraper.js
+ * @LastEditTime: 2021-06-28 09:49:28
  * @LastEditors: zhouxiaojuan
  */
 import React, { Component } from 'react';
@@ -58,11 +54,7 @@ export class DrawerWraper extends Component {
               updateNode={updateNode}
               onClose={this.onClose}
               setDrawerState={data => this.setState(data)}
-<<<<<<< HEAD:src/pages/WorkflowTree/components/Drawers/DrawerWraper.js
             /> */}
-=======
-            />
->>>>>>> dcc2a9597052947fcb120155581dc4cde2db9c8b:src/pages/Collection/Tactics/WorkflowTree/components/Drawers/DrawerWraper.js
           </Drawer>
         )}
       </div>
